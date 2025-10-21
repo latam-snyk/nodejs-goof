@@ -83,9 +83,8 @@ if (app.get('env') == 'development') {
   app.use(errorHandler());
 }
 
-var token = process.env.SECRET_TOKEN;
-console.log('token: ' + token);
+
 
 http.createServer(app).listen(app.get('port'), function () {
   console.log('Express server listening on port ' + app.get('port'));
-});
+});git 
