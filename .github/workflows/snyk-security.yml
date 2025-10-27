@@ -69,6 +69,9 @@ jobs:
       - name: Snyk Open Source test
         run: snyk test --json | snyk-to-html -o results_SCA.html || true
 
+      - name: Snyk IaC test
+        run: snyk iac test
+
         # Upload the generated HTML files as artifacts
       - name: Upload Snyk HTML reports
         uses: actions/upload-artifact@v4
